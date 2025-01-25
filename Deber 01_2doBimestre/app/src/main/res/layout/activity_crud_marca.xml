@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_crud_marca"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrudMarca">
+
+    <EditText
+        android:id="@+id/input_nombre_marca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la marca"
+        android:inputType="text"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/input_descripcion_marca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/input_nombre_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/input_fecha_fundacion_marca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Año de fundación (YYYY)"
+        android:inputType="number"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/input_descripcion_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_activa_marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Está activa?"
+        app:layout_constraintTop_toBottomOf="@id/input_fecha_fundacion_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btn_guardar_marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintTop_toBottomOf="@id/switch_activa_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
